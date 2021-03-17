@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+    $primary: #161616;
+    $secondary: #80ba8e;
+    $text: #777777;
+    $white: #fff;
+    $gray: #f2f2f2;
+    $darkGray: #444;
+    $fontFamily: 'Roboto', sans-serif;
+    $fontSize: 18px;
+    $transitions: .4s ease;
+    $padding: 100px 0;
+
+    /***************basic style*******************/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $fontFamily;
+
+}
+.cont{
+    width: 80%;
+    margin: 0 10%;
+    
+}
+a{
+    color: $white;
+    text-decoration: none;
+}
+
+header{
+    height: 60vh;
+    width: 100%;
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    background-position:center;
+    color: $gray;
+  
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)) ;
+    
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    @media(max-width:760px){
+        flex-direction: column;   
+       }
+}
+
+li{
+    padding: 20px;
+    text-transform: uppercase;
+    @media(max-width:760px){
+        padding: 6px;  
+        text-align: center;
+       }
+       a{
+
+       
+       &:hover{
+           transition: 0.5 ease;
+           background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1));
+       }
+    }
+}
+
+hgroup{
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0 0 5px $primary;
+    
+
+
+h1{
+    margin-top: 100px;
+    margin-bottom: 25px;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+h5{
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-shadow: $darkGray;
+}
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: $gray;
+    .header{
+        height: auto;
+        width: 80%;
+        margin-top: 5px;
+        
+        h2{
+            font-size: 2.5rem;
+            font-weight: 300;
+            padding: $padding;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: 100;
+            text-align: center;
+            padding-bottom: 70px;
+        }
+    }
+
+    hr{
+        width: 80%;
+        background: $gray;
+        opacity: 15%;
+    }
+    
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 6vh 0vh;
+        article{
+            color: $darkGray;
+            flex: 0 0 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 40px;
+            text-align: center;
+
+            .pad{
+                font-size: 4.3rem;
+                opacity: 20%;
+                color: $darkGray;
+            }
+            i{
+                font-size: 3.5rem;
+                opacity: 50%;
+            }
+            h5{
+                margin: 40px;
+                opacity: 60%;   
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            p{
+                margin-bottom: 50px;
+                opacity: 60%;
+                font-weight: 300;
+            }
+            button{
+                padding:15px;
+                background: $secondary;
+                border-radius: 5px;
+                border: none;
+                color: $gray;
+                &:hover{
+                    background: #60916c;
+                    cursor: pointer;
+                    transition:$transitions;
+                }
+            }
+        }
+    }
+}
+
+.bossblog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog{
+    height: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    flex-wrap: wrap;
+    padding: $padding;
+    padding: $padding;
+
+    article{
+        flex: 0 0 25%;
+        height: auto;
+        color: $darkGray;
+        margin: 20px;
+        text-align: center;
+        
+        h5{
+            padding-top: 20px;
+            padding: 40px;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        
+        p{
+            font-weight: 300;
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
+.quote{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../img/header.jpg");
+    background-size: cover;
+    background-position: center;
+
+    p{
+        font-weight: 200;
+        color: $white;
+        letter-spacing: 1.5px;
+        font-size: 1.2rem;
+    }
+}
+
+footer{
+    background:$primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: 2rem;
+        font-weight: 300;
+        color: white;
+        padding: $padding;
+        padding-bottom: 50px;
+    }
+
+    p{
+        color: $darkGray;
+        padding-bottom: 20px;
+    }
+
+    ul{
+        display: flex;
+        padding-bottom: 20px;
+
+        a{
+            color: $gray;
+            font-size: 1.3rem;
+            color: $darkGray;
+            &:hover{
+                color: $white;
+                transition: $transitions;
+            }
+        }
+    }
+    hr{
+        width: 80%;
+        color: $darkGray;
+    }
+    .copy{
+        padding:50px;
+    }
+}
